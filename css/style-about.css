@@ -15,10 +15,7 @@ body, html {
     height: 100%;
     color: #fff;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    overflow-y: auto;
 }
 
 .contacts-background h1 {
@@ -30,14 +27,37 @@ body, html {
 
 .team-photo {
     display: flex;
-    justify-content: center;
-    gap: 80px; /* Увеличенное расстояние между кругами */
-    padding-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 100px; /* Расстояние от верха страницы */
+    left: 20px; /* Расстояние от левого края */
+    gap: 40px;
 }
 
 .team-photo img {
-    width: 250px; /* Увеличенный размер кругов */
-    height: 250px; /* Увеличенный размер кругов */
-    border: 5px solid #fff;
+    width: 250px;
+    height: 250px;
+    border: 5px solid;
     border-radius: 50%;
+    animation: borderColorChange 5s infinite;
+}
+
+/* Анимация переливания границы */
+@keyframes borderColorChange {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: yellow;
+    }
+    50% {
+        border-color: green;
+    }
+    75% {
+        border-color: blue;
+    }
+    100% {
+        border-color: red;
+    }
 }
