@@ -16,6 +16,10 @@ body, html {
     color: #fff;
     text-align: center;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 .game-description-background h1 {
@@ -24,31 +28,26 @@ body, html {
     margin-top: 20px;
 }
 
-.content {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 20px;
-    align-items: start;
-    padding: 20px;
-    color: #fff;
-    font-family: 'Pixelify Sans'
-}
-
 .sprite-container {
-    width: 100px; /* Double the original size */
-    height: 100px; /* Double the original size */
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
 }
 
 .sprite-container img {
     width: 100%;
     height: 100%;
-    animation: spriteAnimation 1s steps(4) infinite; /* Example animation */
+    animation: spriteAnimation 1s steps(4) infinite;
 }
 
-.description {
+.content {
+    width: 100%; /* Изменено на 100% */
+    padding: 0 20px; /* Отступы для выравнивания текста */
+    color: #fff;
+    font-family: 'Pixelify Sans';
     font-size: 1.2rem;
     line-height: 1.5;
-    text-align: left;
+    text-align: left; /* Текст выравнивается по левому краю */
 }
 
 h2 {
@@ -83,7 +82,7 @@ h2 {
 
 @keyframes spriteAnimation {
     from { background-position: 0 0; }
-    to { background-position: -400px 0; } /* Adjust according to sprite sheet */
+    to { background-position: -400px 0; }
 }
 
 @keyframes colorChange {
