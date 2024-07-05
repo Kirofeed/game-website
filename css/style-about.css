@@ -25,14 +25,39 @@ body, html {
     animation: colorChange 5s infinite;
 }
 
+.team-photo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+    margin-top: 20px; /* Расстояние от верха страницы */
+    padding: 0 20px; /* Отступы от краев */
+}
+
+.team-photo-container .photo-text {
+    flex-grow: 1; /* Занимает все доступное пространство */
+    font-family: 'Pixelify Sans', cursive; /* Шрифт Pixelify Sans */
+    text-align: left;
+    font-size: 1.5rem; 
+}
+
+.team-photo-container img {
+    width: 250px;
+    height: 250px;
+    border: 5px solid;
+    border-radius: 50%;
+    animation: borderColorChange 5s infinite;
+}
+
 .team-photo {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    top: 100px; /* Расстояние от верха страницы */
-    left: 20px; /* Расстояние от левого края */
+    align-items: flex-start;
+    width: 100%;
     gap: 40px;
+    margin-top: 20px; /* Расстояние от верхнего блока */
+    padding: 0 20px; /* Отступы от краев */
 }
 
 .team-photo img {
